@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-10-06T20:59:10+09:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Mingginew Blog</title><subtitle>It's my first blog for studying about IT.</subtitle><author><name>http://www.linkedin.com/in/alainpham</name></author><entry><title type="html">깃 블로그 생성하기</title><link href="http://0.0.0.0:4000/posts/createGitBlog/" rel="alternate" type="text/html" title="깃 블로그 생성하기" /><published>2019-10-04T06:37:00+09:00</published><updated>2019-10-04T06:37:00+09:00</updated><id>http://0.0.0.0:4000/posts/createGitBlog</id><content type="html" xml:base="http://0.0.0.0:4000/posts/createGitBlog/">&lt;p&gt;앞으로 공부하는 내용을 정리해보고자 Gitblog를 생성하였다. 첫 글은 Gitblog를 생성하는 과정에 대해 작성해보고자 한다.&lt;/p&gt;
+
+&lt;h2&gt;Github 로그인&lt;/h2&gt;
+&lt;img class=&quot;center-block img-responsive&quot; src=&quot;/assets/images/posts/2019-10-03-createGitBlog/githubLoginView.png&quot; alt=&quot;github login view&quot;/&gt;
+&lt;p&gt;Github 계정으로 로그인을 하여야 깃블로그 생성이 가능하므로 로그인을 진행하자. 없다면 계정을 하나 생성해주자.&lt;/p&gt;
+&lt;h2&gt;Repository 설정&lt;/h2&gt;
+&lt;img class=&quot;center-block img-responsive&quot; src=&quot;/assets/images/posts/2019-10-03-createGitBlog/githubMainView.png&quot; alt=&quot;github main view&quot;/&gt;
+&lt;p&gt;좌측 New 라고 적힌 녹색 버튼을 클릭하여 새로운 Repository 생성을 진행하자.
+New 버튼을 클릭하였다면, 다음과같은 화면이 뜰것이다.
+&lt;/p&gt;
+&lt;img class=&quot;center-block img-responsive&quot; src=&quot;/assets/images/posts/2019-10-03-createGitBlog/createRepository.png&quot; alt=&quot;create repository&quot;/&gt;
+&lt;p&gt;
+	Repository Name 칸에 본인의 계정명.github.io 라고 입력해주면 된다.
+	평소 Repository를 생성한다면 원하는 이름을 입력하면 되지만, 깃허브 블로그를 만들 때에는 계정명.github.io를 입력하지않으면 안된다.
+	화면에는 나오지않았지만 스크롤을 내려 아래 create repository 버튼을 눌러 repository를 생성해보자.
+&lt;/p&gt;
+
+
+&lt;h2&gt;jeykll&lt;/h2&gt;
+&lt;p&gt;jeykll은 웹사이트나 블로그를 손쉽게 만드는데 도움을 준다.
+	jeykll에 대해 더 자세히 알아보고자 한다면
+	공식홈페이지는 : &lt;a href=&quot;https://jekyllrb-ko.github.io/&quot;&gt;https://jekyllrb-ko.github.io/&lt;/a&gt;이다.
+	템플릿을 적용하여 진행하려하여 구글에 jeykll theme 이라고 검색하여
+&lt;/p&gt;
+&lt;img class=&quot;center-block img-responsive&quot; src=&quot;/assets/images/posts/2019-10-03-createGitBlog/searchJeykllTheme.png&quot; alt=&quot;search jeykll theme&quot;/&gt;
+&lt;p&gt;홈페이지 들어가서 Demo로 확인해보고 원하는 템플릿을 선택하여 다운로드 받는다.&lt;/p&gt;
+&lt;img class=&quot;center-block img-responsive&quot; src=&quot;/assets/images/posts/2019-10-03-createGitBlog/jekyllThemeMain.png&quot; alt=&quot;jeykll main view&quot;/&gt;
+&lt;h2&gt;로컬저장소 생성&lt;/h2&gt;
+&lt;p&gt;다음 진행하고자 하는것은 다운로드 받은 파일을 깃허브와 연결하려한다.
+	사용하고 있는 소스트리를 이용하여 로컬저장소를 생성하고 원격저장소와 연결을 진행한다.
+&lt;/p&gt;
+&lt;img class=&quot;center-block img-responsive&quot; src=&quot;/assets/images/posts/2019-10-03-createGitBlog/sourceTreeView.png&quot; alt=&quot;sourceTree view&quot;/&gt;
+&lt;p&gt;
+	새로만들기를 클릭하여 로컬저장소 생성을 눌러 목적지 경로를 이전에 다운로드 받은 테마폴더로 해준다. 생성한 로컬저장소를 더블클릭하여 접속한다.
+&lt;/p&gt;
+&lt;p&gt;
+	우측상단의 설정버튼을 클릭하고, 뜨는 창에 원격 탭을 클릭한다.
+	추가버튼을 클릭하여 깃허브에 생성한 URL 경로를 추가해준다.
+&lt;/p&gt;
+&lt;img class=&quot;center-block img-responsive&quot; src=&quot;/assets/images/posts/2019-10-03-createGitBlog/settingRemote.png&quot; alt=&quot;sourceTree view&quot;/&gt;
+
+&lt;p&gt;
+	여기까지 진행이후 새 웹사이트를 켜서 계정명.github.io 를 치고 블로그화면을 확인해본다.
+&lt;/p&gt;</content><author><name>http://www.linkedin.com/in/alainpham</name></author><category term="gitblog" /><summary type="html">앞으로 공부하는 내용을 정리해보고자 Gitblog를 생성하였다. 첫 글은 Gitblog를 생성하는 과정에 대해 작성해보고자 한다. Github 로그인 Github 계정으로 로그인을 하여야 깃블로그 생성이 가능하므로 로그인을 진행하자. 없다면 계정을 하나 생성해주자. Repository 설정 좌측 New 라고 적힌 녹색 버튼을 클릭하여 새로운 Repository 생성을 진행하자. New 버튼을 클릭하였다면, 다음과같은 화면이 뜰것이다. Repository Name 칸에 본인의 계정명.github.io 라고 입력해주면 된다. 평소 Repository를 생성한다면 원하는 이름을 입력하면 되지만, 깃허브 블로그를 만들 때에는 계정명.github.io를 입력하지않으면 안된다. 화면에는 나오지않았지만 스크롤을 내려 아래 create repository 버튼을 눌러 repository를 생성해보자. jeykll jeykll은 웹사이트나 블로그를 손쉽게 만드는데 도움을 준다. jeykll에 대해 더 자세히 알아보고자 한다면 공식홈페이지는 : https://jekyllrb-ko.github.io/이다. 템플릿을 적용하여 진행하려하여 구글에 jeykll theme 이라고 검색하여 홈페이지 들어가서 Demo로 확인해보고 원하는 템플릿을 선택하여 다운로드 받는다. 로컬저장소 생성 다음 진행하고자 하는것은 다운로드 받은 파일을 깃허브와 연결하려한다. 사용하고 있는 소스트리를 이용하여 로컬저장소를 생성하고 원격저장소와 연결을 진행한다. 새로만들기를 클릭하여 로컬저장소 생성을 눌러 목적지 경로를 이전에 다운로드 받은 테마폴더로 해준다. 생성한 로컬저장소를 더블클릭하여 접속한다. 우측상단의 설정버튼을 클릭하고, 뜨는 창에 원격 탭을 클릭한다. 추가버튼을 클릭하여 깃허브에 생성한 URL 경로를 추가해준다. 여기까지 진행이후 새 웹사이트를 켜서 계정명.github.io 를 치고 블로그화면을 확인해본다.</summary></entry><entry><title type="html">WEB서버의 간단한 이해와 구축하기</title><link href="http://0.0.0.0:4000/posts/buildingWebServer/" rel="alternate" type="text/html" title="WEB서버의 간단한 이해와 구축하기" /><published>2019-10-04T06:37:00+09:00</published><updated>2019-10-04T06:37:00+09:00</updated><id>http://0.0.0.0:4000/posts/buildingWebServer</id><content type="html" xml:base="http://0.0.0.0:4000/posts/buildingWebServer/">&lt;p&gt;WEB서버와 WAS서버가 무엇인지에 대해 간단히 이해해보고, Apache를 이용하여 WEB서버를 구축해보자.&lt;/p&gt;
+
+&lt;h2&gt;WEB서버란?&lt;/h2&gt;
+
+&lt;h2&gt;WEB서버와 WAS서버의 차이&lt;/h2&gt;
+
+&lt;h2&gt;WEB서버 종류&lt;/h2&gt;
+
+&lt;h2&gt;WEB서버 구축 방법&lt;/h2&gt;</content><author><name>http://www.linkedin.com/in/alainpham</name></author><category term="OS" /><category term="LINUX" /><summary type="html">WEB서버와 WAS서버가 무엇인지에 대해 간단히 이해해보고, Apache를 이용하여 WEB서버를 구축해보자. WEB서버란? WEB서버와 WAS서버의 차이 WEB서버 종류 WEB서버 구축 방법</summary></entry></feed>

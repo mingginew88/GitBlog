@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@koint">
+  <meta name="twitter:creator" content="@koint">
+
+  <!-- SEO stuff -->
+  <title>WEB서버의 간단한 이해와 구축하기</title>
+  <meta property="og:title" content="WEB서버의 간단한 이해와 구축하기" />
+  <meta name="twitter:title" content="WEB서버의 간단한 이해와 구축하기">
+
+
+  
+	  <meta name="description" content="WEB서버와 WAS서버가 무엇인지에 대해 간단히 이해해보고, Apache를 이용하여 WEB서버를 구축해보자.
+
+WEB서버란?
+
+WEB서버와 WAS서버의 차이
+
+WEB서버 종류
+
+WEB서버 구축 방법" />
+	  <meta property="og:description" content="WEB서버와 WAS서버가 무엇인지에 대해 간단히 이해해보고, Apache를 이용하여 WEB서버를 구축해보자.
+
+WEB서버란?
+
+WEB서버와 WAS서버의 차이
+
+WEB서버 종류
+
+WEB서버 구축 방법" />
+	  <meta name="twitter:description" content="WEB서버와 WAS서버가 무엇인지에 대해 간단히 이해해보고, Apache를 이용하여 WEB서버를 구축해보자.
+
+WEB서버란?
+
+WEB서버와 WAS서버의 차이
+
+WEB서버 종류
+
+WEB서버 구축 방법">
+  
+  <link rel="canonical" href="http://0.0.0.0:4000/posts/buildingWebServer/" />
+  <meta property="og:url" content="http://0.0.0.0:4000/posts/buildingWebServer/" />
+  <meta name="twitter:url" content="http://0.0.0.0:4000/posts/buildingWebServer/">
+
+  <meta property="og:site_name" content="Mingginew Blog" />
+  <meta property="og:image" content="http://0.0.0.0:4000/assets/images//posts/buildingWebServer/top.jpg" />
+  <meta name="twitter:image" content="http://0.0.0.0:4000/assets/images//posts/buildingWebServer/top.jpg">
+
+   <!-- if it's an article -->
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2019-10-07T01:00:00+09:00" />
+  <meta property="article:modified_time" content="2019-10-04T06:37:00+09:00" />
+
+  <meta content="http://www.linkedin.com/in/alainpham" property="article:author">
+
+  
+	  
+	  <meta content="development" property="article:section">
+	  
+  
+
+  
+	  
+	  <meta content="OS" property="article:tag">
+	  
+	  <meta content="LINUX" property="article:tag">
+	  
+  
+
+    <script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "WEB서버의 간단한 이해와 구축하기",
+"datePublished": "2019-10-07T01:00:00+09:00",
+  
+"description": "WEB서버와 WAS서버가 무엇인지에 대해 간단히 이해해보고, Apache를 이용하여 WEB서버를 구축해보자.
+
+WEB서버란?
+
+WEB서버와 WAS서버의 차이
+
+WEB서버 종류
+
+WEB서버 구축 방법
+",
+  
+"url": "http://0.0.0.0:4000/posts/buildingWebServer/"}</script>
+
+  
+
+  <link rel="author" href="http://www.linkedin.com/in/alainpham"/>
+
+   <!-- End SEO stuff -->
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/assets/css/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+   <link href="/assets/css/syntax.css" rel="stylesheet">
+
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+	<div>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button class="navbar-toggle collapsed" type="button"
+					data-toggle="collapse" data-target="#navbar-collapse-menu">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/"> <i class="fa fa-barcode"></i>
+				</a>
+			</div>
+			<div id="navbar-collapse-menu" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+
+					
+						<!-- If has submenues -->
+						
+						<li class="dropdown">
+							<a class="dropdown-toggle"	data-toggle="dropdown" href="#">
+								Language
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								
+									<li>
+										<a href="/projects/java">
+											
+											Java
+										</a>
+									</li>
+								
+									<li>
+										<a href="/projects/python">
+											
+											Python
+										</a>
+									</li>
+								
+								</ul>
+							</li>
+						
+					
+						<!-- If has submenues -->
+						
+							<li><a href="/">Posts</a></li>
+						
+					
+						<!-- If has submenues -->
+						
+							<li><a href="/tags">Tags</a></li>
+						
+					
+						<!-- If has submenues -->
+						
+						<li class="dropdown">
+							<a class="dropdown-toggle"	data-toggle="dropdown" href="#">
+								Follow me
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								
+									<li>
+										<a href="http://github.com/mingginew88">
+											
+											<i class="fa fa-inverse fa-github fa-2x"></i>
+											
+											GitHub
+										</a>
+									</li>
+								
+								</ul>
+							</li>
+						
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="jumbotron  clearfix">
+
+		<h1 class="text-center">WEB서버의 간단한 이해와 구축하기</h1>
+
+	</div>
+</div>
+
+	<div class="container">
+
+	
+	<p>
+		<strong>October 06, 2019</strong> ( last updated : October 04, 2019 )
+		<br>
+		
+			<a class="label label-default" href="/tags/#os">OS</a>
+		
+			<a class="label label-default" href="/tags/#linux">LINUX</a>
+		
+    </p>
+	
+	<hr>
+	<h1>Abstract</h1>
+	
+
+	<p>WEB서버와 WAS서버가 무엇인지에 대해 간단히 이해해보고, Apache를 이용하여 WEB서버를 구축해보자.</p>
+
+<h2>WEB서버란?</h2>
+
+<h2>WEB서버와 WAS서버의 차이</h2>
+
+<h2>WEB서버 종류</h2>
+
+<h2>WEB서버 구축 방법</h2>
+
+
+
+	
+	<p>Originally published October 06, 2019
+    <br> Latest update October 04, 2019</p>
+
+    <p><strong>Related posts :</strong></p>
+        <ul>
+	    
+			  
+			  
+			  
+			  
+			  
+		
+			  
+			  
+			  
+			  
+			  
+		
+		</ul>
+	
+
+	 
+	</div>
+	<footer class="footer">
+	<ul class="footer-links">
+		<li><a href="http://github.com/mingginew88"> <i class="fa fa-inverse fa-github fa-3x"></i></a></li>
+	</ul>
+</footer>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

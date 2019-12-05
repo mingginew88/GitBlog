@@ -40,46 +40,58 @@ tags: [Qlik Sense]
 
 
 <h2>설치</h2>
-<p>Install 버튼 눌러 진행한다.</p>
+<p>1) Install 버튼 눌러 진행한다.</p>
 <img class="center-block img-responsive" src="/assets/images/posts/2019-12-05-installQMC/Install_1.png" alt="Install 진행 과정"/>
+<p></p>
 
-<p>라이센스 조항에 동의를 하고자 "I accept the license agreement" 항목 선택하여 Next 버튼을 누른다.</p>
+<p>2) 라이센스 조항에 동의를 하고자 "I accept the license agreement" 항목 선택하여 Next 버튼을 누른다.</p>
 <img class="center-block img-responsive" src="/assets/images/posts/2019-12-05-installQMC/Install_2.png" alt="Install 진행 과정"/>
+<p></p>
 
-<p>새로운 노드를 만들지 기존 노드에 추가할지를 결정하는 것 같은데 "Create cluster" 버튼을 클릭하여 진행한다.</p>
+<p>3) 새로운 노드를 만들지 기존 노드에 추가할지를 결정하는 것 같은데 "Create cluster" 버튼을 클릭하여 진행한다.</p>
 <img class="center-block img-responsive" src="/assets/images/posts/2019-12-05-installQMC/Install_3.png" alt="Install 진행 과정"/>
+<p></p>
 
-<p>machine 명은 되도록이면 처음 잡아주는 값을 유지하여 진행 하도록 한다. </p>
+<p>4) machine 명은 되도록이면 처음 잡아주는 값을 유지하여 진행 하도록 한다. </p>
 <img class="center-block img-responsive" src="/assets/images/posts/2019-12-05-installQMC/Install_4.png" alt="Install 진행 과정"/>
+<p></p>
 
-<p>"Install local database"항목을 선택하고 "Database user password"를 입력하고 동일하게 "Confirm password"를 입력해준다</p>
+<p>5) "Install local database"항목을 선택하고 "Database user password"를 입력하고 동일하게 "Confirm password"를 입력해준다</p>
 <img class="center-block img-responsive" src="/assets/images/posts/2019-12-05-installQMC/Install_5.png" alt="Install 진행 과정"/>
+<p></p>
 
-<p>여러 노드를 쓸 때 IP range에 추가해 주는 거로 알고 있지만 어떤식으로 활용하는지는 아직 모르겠다.</p>
+<p>6) 여러 노드를 쓸 때 IP range에 추가해 주는 거로 알고 있지만 어떤식으로 활용하는지는 아직 모르겠다.</p>
 <img class="center-block img-responsive" src="/assets/images/posts/2019-12-05-installQMC/Install_6.png" alt="Install 진행 과정"/>
+<p></p>
 
-<p>"Username"은 .\ 를 적어주고 그 뒤에 사용하는 컴퓨터 계정과 그에 해당하는 암호도 적어준다.</p>
+<p>7) "Username"은 .\ 를 적어주고 그 뒤에 사용하는 컴퓨터 계정과 그에 해당하는 암호도 적어준다.</p>
 <img class="center-block img-responsive" src="/assets/images/posts/2019-12-05-installQMC/Install_7.png" alt="Install 진행 과정"/>
+<p></p>
 
-<p>Root folder를 위해 폴더 경로를 설쟁해 주면 되는데 나의 경우 C:\QlikSense\Shared 로 설정해두었다.
+<p>8) Root folder를 위해 폴더 경로를 설쟁해 주면 되는데 나의 경우 C:\QlikSense\Shared 로 설정해두었다.
     작성 시 \\localhost\ 를 경로 앞에 붙여주고 C: 대신 C$ 로 표시해준다.
     정리해보면 최종 Root 경로는 \\localhost\C$\QlikSense\Shared 로 하였다.
 </p>
 <img class="center-block img-responsive" src="/assets/images/posts/2019-12-05-installQMC/Install_8.png" alt="Install 진행 과정"/>
+<p></p>
 
-<p>Centralized Logging은 logging 방식을 setting해주는거 같은데 아직 활용법을 알지 못하여
+<p>9) Centralized Logging은 logging 방식을 setting해주는거 같은데 아직 활용법을 알지 못하여
     "Configure centralized logging"항목을 해제하고 "Next"버튼을 누른다. </p>
 <img class="center-block img-responsive" src="/assets/images/posts/2019-12-05-installQMC/Install_9.png" alt="Install 진행 과정"/>
+<p></p>
 
-<p>설치 경로는 기본 제공해주는 설치 경로로 잡아주었다.</p>
+<p>10) 설치 경로는 기본 제공해주는 설치 경로로 잡아주었다.</p>
 <img class="center-block img-responsive" src="/assets/images/posts/2019-12-05-installQMC/Install_10.png" alt="Install 진행 과정"/>
+<p></p>
 
-<p>Repository Database Superuser Password 를 작성해준다.</p>
+<p>11) Repository Database Superuser Password 를 작성해준다.</p>
 <img class="center-block img-responsive" src="/assets/images/posts/2019-12-05-installQMC/Install_11.png" alt="Install 진행 과정"/>
+<p></p>
 
-<p>설치 후 서비스를 시작하는 항목 "Start the Qlik Sense services when the setup is complete"을 해제해주고 "Next"를 눌러 설치를 진행한다.</p>
+<p>12) 설치 후 서비스를 시작하는 항목 "Start the Qlik Sense services when the setup is complete"을 해제해주고 "Next"를 눌러 설치를 진행한다.</p>
 <img class="center-block img-responsive" src="/assets/images/posts/2019-12-05-installQMC/Install_12.png" alt="Install 진행 과정"/>
+<p></p>
 
-<p>이것으로 Qlik Sense Server 설치를 마친다.</p>
+<p>13) 이것으로 Qlik Sense Server 설치를 마친다.</p>
 <img class="center-block img-responsive" src="/assets/images/posts/2019-12-05-installQMC/Install_13.png" alt="Install 진행 과정"/>
 

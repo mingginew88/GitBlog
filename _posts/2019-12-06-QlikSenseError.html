@@ -1,0 +1,28 @@
+---
+layout: default
+title:  "Qlik Sense Server 설치 시 이슈 사항"
+date: 2019-12-06 07:00:00 +0200
+published: 2019-12-06 09:00:00 +0200
+comments: true
+categories: development
+tags: [Qlik Sense, QMC, Error]
+---
+
+<p>Qlik Sense Server 설치 이후 바탕화면 QMC 실행파일 클릭 해서</p>
+<img class="center-block img-responsive" src="/assets/images/posts/2019-12-06-QlikSenseError/QMC.PNG" alt="QMC"/>
+
+<p>아래와 같은 에러가 뜬다면</p>
+<img class="center-block img-responsive" src="/assets/images/posts/2019-12-06-QlikSenseError/javascriptError.png" alt="QMC"/>
+
+<pre>
+    1. 윈도우 익스플로러 실행
+    2. 화면 우측 상단의 "도구 메뉴" 클릭 또는 단축키 (Alt+X) 사용
+    3. "인터넷 옵션" 메뉴 클릭
+    4. "보안" 탭 클릭
+    5. "인터넷" 영역에서 "사용자 지정 수준" 버튼 클릭
+    6. "보안 설정 - 인터넷 영역"에서 아래로 내려 "스크립팅" 목록 중 "Active 스크립팅"을 "사용"으로 변경
+    7. "확인" 버튼 클릭
+    8. 윈도우 익스플로러 재시작
+
+    위 과정을 통하여 문제 해결을 한다.
+</pre>
